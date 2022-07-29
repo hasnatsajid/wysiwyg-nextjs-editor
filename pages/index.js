@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -13,42 +13,91 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="/">Next.js!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className="wysiwyg-next">
+          <div className="toolbar">
+            <div class="line">
+              <div class="box">
+                <span class="editor-btn icon smaller" data-action="bold" data-tag-name="b" title="Bold">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/bold.png" />
+                </span>
+                <span class="editor-btn icon smaller" data-action="italic" data-tag-name="i" title="Italic">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/italic.png" />
+                </span>
+                <span class="editor-btn icon smaller" data-action="underline" data-tag-name="u" title="Underline">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/underline.png" />
+                </span>
+                <span class="editor-btn icon smaller" data-action="strikeThrough" data-tag-name="strike" title="Strike through">
+                  <img src="https://img.icons8.com/fluency-systems-filled/30/000000/strikethrough.png" />
+                </span>
+              </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+              <div class="box">
+                <span class="editor-btn icon has-submenu">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/align-left.png" />
+                  <div class="submenu">
+                    <span class="editor-btn icon" data-action="justifyLeft" data-style="textAlign:left" title="Justify left">
+                      <img src="https://img.icons8.com/fluency-systems-filled/48/000000/align-left.png" />
+                    </span>
+                    <span class="editor-btn icon" data-action="justifyCenter" data-style="textAlign:center" title="Justify center">
+                      <img src="https://img.icons8.com/fluency-systems-filled/48/000000/align-center.png" />
+                    </span>
+                    <span class="editor-btn icon" data-action="justifyRight" data-style="textAlign:right" title="Justify right">
+                      <img src="https://img.icons8.com/fluency-systems-filled/48/000000/align-right.png" />
+                    </span>
+                    <span class="editor-btn icon" data-action="formatBlock" data-style="textAlign:justify" title="Justify block">
+                      <img src="https://img.icons8.com/fluency-systems-filled/48/000000/align-justify.png" />
+                    </span>
+                  </div>
+                </span>
+                <span class="editor-btn icon" data-action="insertOrderedList" data-tag-name="ol" title="Insert ordered list">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/numbered-list.png" />
+                </span>
+                <span class="editor-btn icon" data-action="insertUnorderedList" data-tag-name="ul" title="Insert unordered list">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/bulleted-list.png" />
+                </span>
+                <span class="editor-btn icon" data-action="outdent" title="Outdent" data-required-tag="li">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/outdent.png" />
+                </span>
+                <span class="editor-btn icon" data-action="indent" title="Indent">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/indent.png" />
+                </span>
+              </div>
+              <div class="box">
+                <span class="editor-btn icon" data-action="insertHorizontalRule" title="Insert horizontal rule">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/horizontal-line.png" />
+                </span>
+              </div>
+            </div>
+            <div class="line">
+              <div class="box">
+                <span class="editor-btn icon smaller" data-action="undo" title="Undo">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/undo--v1.png" />
+                </span>
+                <span class="editor-btn icon" data-action="removeFormat" title="Remove format">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/remove-format.png" />
+                </span>
+              </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+              <div class="box">
+                <span class="editor-btn icon smaller" data-action="createLink" title="Insert Link">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/add-link.png" />
+                </span>
+                <span class="editor-btn icon smaller" data-action="unlink" data-tag-name="a" title="Unlink">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/delete-link.png" />
+                </span>
+              </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+              <div class="box">
+                <span class="editor-btn icon" data-action="toggle-view" title="Show HTML-Code">
+                  <img src="https://img.icons8.com/fluency-systems-filled/48/000000/source-code.png" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="content"></div>
         </div>
       </main>
 
@@ -65,5 +114,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
