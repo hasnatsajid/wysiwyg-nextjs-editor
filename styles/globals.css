@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 html,
 body {
   margin: 0;
@@ -62,8 +64,8 @@ a {
   width: 24px;
 }
 .wysiwyg-next .toolbar .line .box .editor-btn.has-submenu {
-  width: 20px;
-  padding: 0 10px;
+  width: 100%;
+  /* padding: 0 10px; */
 }
 .wysiwyg-next .toolbar .line .box .editor-btn.has-submenu::after {
   content: '';
@@ -99,21 +101,23 @@ a {
   padding: 15px 12px;
   line-height: 1.5;
 }
-.wysiwyg-next .content-area .visuell-view {
+.wysiwyg-next .content-area .visual-view {
   outline: none;
+  font-family: 'Inter', sans-serif;
   min-height: 12rem;
 }
-.wysiwyg-next .content-area .visuell-view p {
+.wysiwyg-next .content-area .visual-view p {
   margin: 12px 0;
 }
 .wysiwyg-next .content-area .html-view {
   outline: none;
   display: none;
+  font-weight: 500;
   width: 100%;
   height: 200px;
   border: none;
   resize: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 /* Modal */
 .modal {
